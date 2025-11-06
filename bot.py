@@ -472,7 +472,7 @@ def main():
     application = Application.builder().token(TOKEN).build()
     job_queue = application.job_queue
 
-    application.add_handler(CommandHandler("start", lambda update, context: update.message.reply_text("أهلاً بك! استخدم 'كلمات [العدد]' و 'سرعه [العدد]' و 'تأخير [العدد]' لتحديد الإعدادات، ثم أرسل 'تلقائي' لجولة واحدة، أو 'مستمر' للتنافس المتواصل.")))
+    application.add_handler(CommandHandler("start", lambda update, context: update.message.reply_text("ارحب")))
 
     # الإعدادات
     application.add_handler(MessageHandler(filters.TEXT & filters.Regex(re.compile(r'^كلمات\s+\d+$', re.IGNORECASE)), set_word_limit))
